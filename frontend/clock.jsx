@@ -10,8 +10,22 @@ export default class Clock extends React.Component {
     }
 
     tick() {
-        seconds += 1;
+        this.setState({ time: newDate()});
     }
+
+//     class WordInput extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       word: ""
+//     };
+//     this.updateWord = this.updateWord.bind(this);
+//   }
+
+//   updateWord(event) {
+//     this.setState({ word: event.currentTarget.value });
+//   }
+
 
     componentDidMount() {
 
@@ -37,3 +51,5 @@ export default class Clock extends React.Component {
     }
 
 }
+
+export default Clock;
