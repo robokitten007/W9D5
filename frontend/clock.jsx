@@ -7,6 +7,7 @@ export default class Clock extends React.Component {
         this.state = {
         time: new Date()
         };
+        this.tick = this.tick.bind(this);
     }
 
     tick() {
@@ -28,13 +29,19 @@ export default class Clock extends React.Component {
 
 
     componentDidMount() {
-
+        this.intervalID = setInterval(this.tick, 1000);
     }
 
     componentWillUnmount() {
-
+        clearInterval(this.intervalID);
     }
 
+//  stack overflow set interval
+//  var handle = setInterval(drawAll, 20);
+
+// When you want to cancel it:
+// clearInterval(handle);
+// handle = 0; // I just do this so I know I've cleared the interval
     
 
     render() {
@@ -47,9 +54,15 @@ export default class Clock extends React.Component {
                 <h1>What Time Is It?</h1> 
                 <p>{hours}:{minutes}:{seconds}</p>
             </div>
-        )
+        );
     }
 
 }
 
 export default Clock;
+
+// var handle = setInterval(drawAll, 20);
+
+// // When you want to cancel it:
+// clearInterval(handle);
+// handle = 0; // I just do this so I know I've cleared the interval
