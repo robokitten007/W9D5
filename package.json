@@ -1,10 +1,9 @@
 {
-  "name": "W10D2",
+  "name": "W9D5",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "webpack": "webpack --mode=development",
+    "start": "webpack --watch --mode=development",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

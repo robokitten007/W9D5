@@ -58,11 +58,3 @@ export default class Clock extends React.Component {
     }
 
 }
-
-export default Clock;
-
-// var handle = setInterval(drawAll, 20);
-
-// // When you want to cancel it:
-// clearInterval(handle);
-// handle = 0; // I just do this so I know I've cleared the interval
